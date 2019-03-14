@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div id="menu">
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#photos">My Photos</a></li>
+    <li><a href="#playlist">My Playlist</a></li>
+    <li><a href="#like">Like</a></li>
+    <li><a href="#qrcoder">QR code</a></li>
+    <li><a href="#spa">Q&A</a></li>
+    <li><a href="#contact">Contact Me</a></li>
+  </div>
+
+  <section id="about" class="section">
+    <br />
+    <br />
+    <br />
+    <h1>me</h1>
+    <br />
+    <b style="font-size:200%;">M</b>y name is <b>Eran Tagansky</b>, I'm 20 years old and originally from Rishon Lezion.
+    I am a third year student in the Information Systems Engeneering department in Ben Gurion University.
+    My hobbies are Learning about the world, cooking, watching series and playing and being with my friends.
+    My expectation from this course are very high and I want to learn many intresting things and don't work too much
+    about exhausting css files.
+    <br />
+    <br />
+  </section>
+
+  <section id="photos" class="section">
+    <h1>my photos</h1>
+    <br />
+    <br />
+    <img src="Pictures/P1.png" width="24.5%" />
+    <!--add if you on picture make her big...  style="transform: rotate(270deg);" -->
+    <img src="Pictures/P5.png" width="24.5%" />
+    <img src="Pictures/P3.png" width="24.5%" />
+    <img src="Pictures/P6.png" width="24.5%" />
+    <br />
+    <br />
+  </section>
+
+  <section id="playlist" class="section">
+    <h1>my playlist</h1>
+    <br />
+    <br />
+    <p align="center">
+      <iframe style="filter: grayscale(100%);" width="545" height="409"
+        src="https://www.youtube.com/embed/1pcxrdP3ums?list=PLfUlyVMXExt089ExwSlTsTbd7OTyryjZ3" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br />
+    </p>
+    <br />
+    <br />
+  </section>
+
+  <section id="like" class="section">
+    <h1>give me a like</h1>
+    <br />
+    <div class="fb-like" data-layout="standard" data-action="like" data-size="large" data-show-faces="true"
+      data-share="true"></div>
+    <br />
+    <br />
+  </section>
+
+  <section id="qrcoder" class="section">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>scan my code</h1>
+
+    <br />
+    <br />
+    <br />
+  </section>
+
+  <section id="spa" class="section">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>ans</h1>
+
+    <br />
+    <br />
+    <br />
+  </section>
+
+  <section id="contact" class="section">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>contact me</h1>
+    <br />
+    <br />
+    <br />
+  </section>
+
+
+  <script type="text/javascript">
+    $(function () {
+      $("#nav a").click(function (e) {
+        e.preventDefault();
+        $('html,body').scrollTo(this.hash, this.hash);
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).scroll(function () {
+      $('#menu').toggle($(this).scrollTop() > 1000)
+    });​
+  </script>
+</body>
+
+</html>

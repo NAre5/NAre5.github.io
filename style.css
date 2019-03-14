@@ -1,0 +1,39 @@
+/* body{
+	cursor: none;
+} */
+#menu
+{
+	position: fixed;
+	width: 100%;
+	height: 35px;
+}
+
+#menu li {
+	background: black;
+	display: inline-block;
+	margin-right: 8px;
+    -webkit-animation: fadein 6s;
+            animation: fadein 6s;
+	margin-top: auto;
+	padding: 14px 16px;
+	overflow: hidden;
+}
+#menu a {
+	color: aliceblue;
+}
+
+#photos img{
+	transition: transform .2s; /* Animation */
+	margin: 0 auto;
+	text-align: center;
+	display: inline-block;
+	filter: grayscale(100%);
+}
+
+#photos img:hover {
+	transform: scale(1.5);
+}
+
+h1{
+	text-align: center;
+}
