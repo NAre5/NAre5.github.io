@@ -3,6 +3,28 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <script>
+    var flag=true;
+    var nflag=0;
+    function changeColor(){
+      flag=!flag;
+      nflag=(nflag+1)%3;
+      if(nflag==0)
+      {
+        document.body.style.filter="grayscale(100%)";
+        style_button.value="noraml";
+      }
+      else if(nflag==1)
+      {
+        document.body.style.filter="none";
+        style_button.value="blue";
+      }
+      else{
+        document.body.style.filter="sepia(200%) hue-rotate(190deg) saturate(1000%)";
+        style_button.value="greyscale";
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -14,19 +36,23 @@
     <li><a href="#qrcoder">QR code</a></li>
     <li><a href="#spa">Q&A</a></li>
     <li><a href="#contact">Contact Me</a></li>
+    <li style="float:right"><input id="style_button" type="button" onclick="changeColor()" value="grayscale"></li>
   </div>
 
   <section id="about" class="section">
     <br />
     <br />
     <br />
-    <h1>me</h1>
+    <h1 style="font-size:300%">me.</h1>
     <br />
-    <b style="font-size:200%;">M</b>y name is <b>Eran Tagansky</b>, I'm 20 years old and originally from Rishon Lezion.
-    I am a third year student in the Information Systems Engeneering department in Ben Gurion University.
-    My hobbies are Learning about the world, cooking, watching series and playing and being with my friends.
-    My expectation from this course are very high and I want to learn many intresting things and don't work too much
-    about exhausting css files.
+    <div style="font-size: 150%;color: blue">
+      <b style="font-size:200%;">M</b>y name is <b>Eran Tagansky</b>, I'm 20 years old and originally from Rishon
+      Lezion.
+      I am a third year student in the Information Systems Engeneering department in Ben Gurion University.
+      My hobbies are Learning about the world, cooking, watching series and playing and being with my friends.
+      My expectation from this course are very high and I want to learn many intresting things and don't work too much
+      about exhausting css files.
+    </div>
     <br />
     <br />
   </section>
@@ -49,7 +75,7 @@
     <br />
     <br />
     <p align="center">
-      <iframe style="filter: grayscale(100%);" width="545" height="409"
+      <iframe width="545" height="409"
         src="https://www.youtube.com/embed/1pcxrdP3ums?list=PLfUlyVMXExt089ExwSlTsTbd7OTyryjZ3" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br />
     </p>
@@ -60,53 +86,24 @@
   <section id="like" class="section">
     <h1>give me a like</h1>
     <br />
-    <div class="fb-page" data-href="https://nare5.github.io/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-
-    <br />
-    <br />
+    <p align="center">
+      <iframe
+        src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fnare5.github.io%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId"
+        width="450" height="80" style="border:none;overflow:hidden;" scrolling="no" frameborder="10"
+        allowTransparency="true" allow="encrypted-media"></iframe>
+    </p>
   </section>
 
   <section id="qrcoder" class="section">
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
     <h1>scan my code</h1>
-
-    <br />
+    <p align="center">
+      <img src="Pictures/qr_code.png">
+    </p>
     <br />
     <br />
   </section>
 
   <section id="spa" class="section">
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
     <h1>ans</h1>
 
     <br />
@@ -115,23 +112,23 @@
   </section>
 
   <section id="contact" class="section">
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
     <h1>contact me</h1>
+    <form action="mailto:erantag@post.bgu.ac.il" method="post" enctype="text/plain" align="center">
+      <p>
+        Email:<input name="Name" type="text" size="25" required>
+      </p>
+      <p>
+        Subject:<input name="Subject" type="text" size="25" required>
+      </p>
+      Message:
+      <p>
+        <textarea name="Text" rows="10" cols="50" required>
+
+        </textarea>
+      </p>
+      <input type="submit" value="submit">
+      <input type="reset" value="reset">
+    </form>
     <br />
     <br />
     <br />
