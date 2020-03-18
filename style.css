@@ -1,48 +1,48 @@
-body{
-	/* filter: sepia(200%) hue-rotate(190deg) saturate(1000%);  */
-/* 	filter:grayscale(100%); */
+body {
+  /* filter: sepia(200%) hue-rotate(190deg) saturate(1000%);  */
+  /* 	filter:grayscale(100%); */
 }
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	z-index: 99 !important;
+#menu {
+  position: fixed;
+  width: 100%;
+  height: 35px;
+  z-index: 99 !important;
 }
 
 #menu li {
-	border-radius: 100px;
-	background: black;
-	display: inline-block;
-	margin-right: 8px;
-    -webkit-animation: fadein 6s;
-            animation: fadein 6s;
-	margin-top: auto;
-	padding: 14px 16px;
-	z-index: 99 !important;
+  border-radius: 100px;
+  background: black;
+  display: inline-block;
+  margin-right: 8px;
+  -webkit-animation: fadein 6s;
+  animation: fadein 6s;
+  margin-top: auto;
+  padding: 14px 16px;
+  z-index: 99 !important;
 }
 #menu a {
-	color: aliceblue;
-	font-size: 150%;
-	text-decoration: none;
+  color: aliceblue;
+  font-size: 150%;
+  text-decoration: none;
 }
 
-#photos img{
-	transition: transform .2s; /* Animation */
-	margin: 0 auto;
-	text-align: center;
-	display: inline-block;
+#photos img {
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
 }
 
 #photos img:hover {
-	transform: scale(1.5);
+  transform: scale(1.5);
 }
 
-h1{
-	font-size: 200%;
-	text-align: center;
+h1 {
+  font-size: 200%;
+  text-align: center;
 }
-#about div{
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-size: 150%;
+#about div {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 150%;
 }

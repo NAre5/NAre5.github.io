@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+  <title>
+    Eran Tagansky Website
+  </title>
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script>
     var flag = true;
@@ -34,6 +36,7 @@
 
 <body>
   <div id="menu">
+    <ul>
     <li><a href="#about">About Me</a></li>
     <li><a href="#photos">My Photos</a></li>
     <li><a href="#playlist">My Playlist</a></li>
@@ -42,6 +45,7 @@
     <li><a href="#spa">Q&A</a></li>
     <li><a href="#contact">Contact Me</a></li>
     <li style="float:right"><input id="style_button" type="button" onclick="changeColor()" value="blue"></li>
+  </ul>
   </div>
 
   <section id="about" class="section">
@@ -66,11 +70,11 @@
     <h1>my photos</h1>
     <br />
     <br />
-    <img src="Pictures/P1.png" width="24.5%" />
+    <img alt="PICTURE1" src="Pictures/P1.png" width="24.5%" />
+    <img alt="PICTURE5" src="Pictures/P5.png" width="24.5%" />
+    <img alt="PICTURE3" src="Pictures/P3.png" width="24.5%" />
+    <img alt="PICTURE6" src="Pictures/P6.png" width="24.5%" />
     <!--add if you on picture make her big...  style="transform: rotate(270deg);" -->
-    <img src="Pictures/P5.png" width="24.5%" />
-    <img src="Pictures/P3.png" width="24.5%" />
-    <img src="Pictures/P6.png" width="24.5%" />
     <br />
     <br />
   </section>
@@ -80,7 +84,7 @@
     <br />
     <br />
     <p align="center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLfUlyVMXExt089ExwSlTsTbd7OTyryjZ3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe title="YouTube Playlist" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLfUlyVMXExt089ExwSlTsTbd7OTyryjZ3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <br />
     </p>
     <br />
@@ -101,7 +105,7 @@
   <section id="qrcoder" class="section">
     <h1>scan my code</h1>
     <p align="center">
-      <img src="Pictures/qr_code.png">
+      <img alt="QR code" src="Pictures/qr_code.png">
     </p>
     <br />
     <br />
@@ -164,15 +168,16 @@
     <h1>contact me</h1>
     <form action="mailto:erantag@post.bgu.ac.il" method="post" enctype="text/plain" align="center">
       <p>
-        Email:<input name="Name" type="text" size="25" required>
+        <label for="Name">Email:</label>
+        <input name="Name" type="text" size="25" required>
       </p>
       <p>
-        Subject:<input name="Subject" type="text" size="25" required>
+        <label for="Subject">Subject:</label>
+        <input name="Subject" type="text" size="25" required>
       </p>
-      Message:
+      <label for="Text">Message:</label>
       <p>
         <textarea name="Text" rows="10" cols="50" required>
-
         </textarea>
       </p>
       <input type="submit" value="submit">
