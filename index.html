@@ -5,32 +5,7 @@
     Eran Tagansky Website
   </title>
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <script>
-    var flag = true;
-    var nflag = 1;
-    var filter = "none";
-    function changeColor() {
-      flag = !flag;
-      nflag = (nflag + 1) % 3;
-      
-      if (nflag == 0) {
-        filter = "grayscale(100%)";
-        style_button.value = "noraml";
-      }
-      else if (nflag == 1) {
-        filter = "none";
-        style_button.value = "blue";
-      }
-      else {
-        filter = "sepia(200%) hue-rotate(190deg) saturate(1000%)";
-        style_button.value = "greyscale";
-      }
-      
-      var elements = document.getElementsByTagName("section");
-      for(e of elements){
-        e.style.filter = filter;
-      }
-    }
+  <script src="script.js">
   </script>
 </head>
 
@@ -70,10 +45,10 @@
     <h1>my photos</h1>
     <br />
     <br />
-    <img alt="PICTURE1" src="Pictures/P1.png" width="24.5%" />
-    <img alt="PICTURE5" src="Pictures/P5.png" width="24.5%" />
-    <img alt="PICTURE3" src="Pictures/P3.png" width="24.5%" />
-    <img alt="PICTURE6" src="Pictures/P6.png" width="24.5%" />
+    <img alt="PICTURE1" src="Pictures/P1_hebogr.jpg" width="24.5%" />
+    <img alt="PICTURE5" src="Pictures/P5_vptzqw.jpg" width="24.5%" />
+    <img alt="PICTURE3" src="Pictures/P3_mmqupu.jpg" width="24.5%" />
+    <img alt="PICTURE6" src="Pictures/P6_maq8lp.jpg" width="24.5%" />
     <!--add if you on picture make her big...  style="transform: rotate(270deg);" -->
     <br />
     <br />
@@ -96,6 +71,7 @@
     <br />
     <p align="center">
       <iframe
+        title="Like Button"
         src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fnare5.github.io%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId"
         width="450" height="80" style="border:none;overflow:hidden;" scrolling="no" frameborder="10"
         allowTransparency="true" allow="encrypted-media"></iframe>
@@ -169,15 +145,15 @@
     <form action="mailto:erantag@post.bgu.ac.il" method="post" enctype="text/plain" align="center">
       <p>
         <label for="Name">Email:</label>
-        <input name="Name" type="text" size="25" required>
+        <input id="Name" name="Name" type="text" size="25" required>
       </p>
       <p>
         <label for="Subject">Subject:</label>
-        <input name="Subject" type="text" size="25" required>
+        <input id="Subject" name="Subject" type="text" size="25" required>
       </p>
       <label for="Text">Message:</label>
       <p>
-        <textarea name="Text" rows="10" cols="50" required>
+        <textarea id="Text" name="Text" rows="10" cols="50" required>
         </textarea>
       </p>
       <input type="submit" value="submit">
@@ -187,21 +163,6 @@
     <br />
     <br />
   </section>
-
-
-  <script type="text/javascript">
-    $(function () {
-      $("#nav a").click(function (e) {
-        e.preventDefault();
-        $('html,body').scrollTo(this.hash, this.hash);
-      });
-    });
-  </script>
-  <script type="text/javascript">
-    $(document).scroll(function () {
-      $('#menu').toggle($(this).scrollTop() > 1000)
-    });​
-  </script>
 </body>
 
 </html>
