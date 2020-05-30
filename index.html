@@ -1,107 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>
-    Eran Tagansky Website
-  </title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <script src="script.js">
-  </script>
-</head>
+  <head>
+    <title>
+      Eran Tagansky Website
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
 
-<body>
-  <div id="menu">
-    <ul>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#photos">My Photos</a></li>
-    <li><a href="#playlist">My Playlist</a></li>
-    <li><a href="#like">Like</a></li>
-    <li><a href="#qrcoder">QR code</a></li>
-    <li><a href="#spa">Q&A</a></li>
-    <li><a href="#contact">Contact Me</a></li>
-    <li style="float:right"><input id="style_button" type="button" onclick="changeColor()" value="blue"></li>
-  </ul>
-  </div>
+  <body>
+    <div id="app">
+      <div id="menu">
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#photos">My Photos</a></li>
+          <li><a href="#playlist">My Playlist</a></li>
+          <li><a href="#like">Like</a></li>
+          <li><a href="#qrcoder">QR code</a></li>
+          <li><a href="#spa">Q&A</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+          <li style="float: right;">
+            <input
+              id="style_button"
+              type="button"
+              v-on:click="changeColor"
+              :value="colorValue"
+            />
+          </li>
+        </ul>
+      </div>
 
-  <section id="about" class="section">
-    <br />
-    <br />
-    <br />
-    <h1 style="font-size:300%">me.</h1>
-    <br />
-    <p style="font-size: 150%;color: blue">
-      <b style="font-size:200%;">M</b>y name is <b>Eran Tagansky</b>, I'm 20 years old and originally from Rishon
-      Lezion.
-      I am a third year student in the Information Systems Engeneering department in Ben Gurion University.
-      My hobbies are Learning about the world, cooking, watching series and playing and being with my friends.
-      My expectation from this course are very high and I want to learn many intresting things and don't work too much
-      about exhausting css files.
-    </p>
-    <br />
-    <br />
-  </section>
+      <section id="about" class="section" :style="sectionColor">
+        <br />
+        <br />
+        <br />
+        <h1 style="font-size: 300%;">me.</h1>
+        <br />
+        <p style="font-size: 150%; color: blue;">
+          <b style="font-size: 200%;">M</b>y name is <b>Eran Tagansky</b>, I'm
+          {{age}} years old and originally from Rishon Lezion. I am a third year
+          student in the Information Systems Engeneering department in Ben
+          Gurion University. My hobbies are Learning about the world, cooking,
+          watching series and playing and being with my friends. My expectation
+          from this course are very high and I want to learn many intresting
+          things and don't work too much about exhausting css files.
+        </p>
+        <br />
+        <br />
+      </section>
 
-  <section id="photos" class="section">
-    <h1>my photos</h1>
-    <br />
-    <br />
-    <img alt="PICTURE1" src="Pictures/P1_hebogr.jpg" width="24.5%" />
-    <img alt="PICTURE5" src="Pictures/P5_vptzqw.jpg" width="24.5%" />
-    <img alt="PICTURE3" src="Pictures/P3_mmqupu.jpg" width="24.5%" />
-    <img alt="PICTURE6" src="Pictures/P6_maq8lp.jpg" width="24.5%" />
-    <!--add if you on picture make her big...  style="transform: rotate(270deg);" -->
-    <br />
-    <br />
-  </section>
+      <section id="photos" class="section" :style="sectionColor">
+        <h1>my photos</h1>
+        <br />
+        <br />
+        <img alt="PICTURE1" src="Pictures/P1_hebogr.jpg" width="24.5%" />
+        <img alt="PICTURE5" src="Pictures/P5_vptzqw.jpg" width="24.5%" />
+        <img alt="PICTURE3" src="Pictures/P3_mmqupu.jpg" width="24.5%" />
+        <img alt="PICTURE6" src="Pictures/P6_maq8lp.jpg" width="24.5%" />
+        <!--add if you on picture make her big...  style="transform: rotate(270deg);" -->
+        <br />
+        <br />
+      </section>
 
-  <section id="playlist" class="section">
-    <h1>my playlist</h1>
-    <br />
-    <br />
-    <p align="center">
-      <iframe async title="YouTube Playlist" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLfUlyVMXExt089ExwSlTsTbd7OTyryjZ3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br />
-    </p>
-    <br />
-    <br />
-  </section>
+      <section id="playlist" class="section" :style="sectionColor">
+        <h1>my playlist</h1>
+        <br />
+        <br />
+        <p align="center">
+          <iframe
+            async
+            title="YouTube Playlist"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/videoseries?list=PLfUlyVMXExt089ExwSlTsTbd7OTyryjZ3"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <br />
+        </p>
+        <br />
+        <br />
+      </section>
 
-  <section id="like" class="section">
-    <h1>give me a like</h1>
-    <br />
-    <p align="center">
-      <iframe
-        async
-        title="Like Button"
-        src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fnare5.github.io%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId"
-        width="450" height="80" style="border:none;overflow:hidden;" scrolling="no" frameborder="10"
-        allowTransparency="true" allow="encrypted-media"></iframe>
-    </p>
-  </section>
+      <section id="like" class="section" :style="sectionColor">
+        <h1>give me a like</h1>
+        <br />
+        <p align="center">
+          <iframe
+            async
+            title="Like Button"
+            src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fnare5.github.io%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId"
+            width="450"
+            height="80"
+            style="border: none; overflow: hidden;"
+            scrolling="no"
+            frameborder="10"
+            allowTransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+        </p>
+      </section>
 
-  <section id="contact" class="section">
-    <h1>contact me</h1>
-    <form action="mailto:sherlord@sherlord5@gmail.com" method="post" enctype="text/plain" align="center">
-      <p>
-        <label for="Name">Email:</label>
-        <input id="Name" name="Name" type="text" size="25" required>
-      </p>
-      <p>
-        <label for="Subject">Subject:</label>
-        <input id="Subject" name="Subject" type="text" size="25" required>
-      </p>
-      <label for="Text">Message:</label>
-      <p>
-        <textarea id="Text" name="Text" rows="10" cols="50" required>
-        </textarea>
-      </p>
-      <input type="submit" value="submit">
-      <input type="reset" value="reset">
-    </form>
-    <br />
-    <br />
-    <br />
-  </section>
-</body>
-
+      <section id="contact" class="section" :style="sectionColor">
+        <h1>contact me</h1>
+        <form
+          action="mailto:sherlord@sherlord5@gmail.com"
+          method="post"
+          enctype="text/plain"
+          align="center"
+        >
+          <p>
+            <label for="Name">Email:</label>
+            <input id="Name" name="Name" type="text" size="25" required />
+          </p>
+          <p>
+            <label for="Subject">Subject:</label>
+            <input id="Subject" name="Subject" type="text" size="25" required />
+          </p>
+          <label for="Text">Message:</label>
+          <p>
+            <textarea id="Text" name="Text" rows="10" cols="50" required>
+            </textarea>
+          </p>
+          <input type="submit" value="submit" />
+          <input type="reset" value="reset" />
+        </form>
+        <br />
+        <br />
+        <br />
+      </section>
+    </div>
+  </body>
 </html>
+
+<script src="script.js"></script>
