@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>
-      Eran Tagansky Website
-    </title>
+    <title>Eran Tagansky Website</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" type="image/png" href="Pictures/html5_logo.png" />
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
 
@@ -12,14 +11,13 @@
     <div id="app">
       <div id="menu">
         <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#photos">My Photos</a></li>
-          <li><a href="#playlist">My Playlist</a></li>
-          <li><a href="#like">Like</a></li>
-          <li><a href="#qrcoder">QR code</a></li>
-          <li><a href="#spa">Q&A</a></li>
-          <li><a href="#contact">Contact Me</a></li>
-          <li style="float: right;">
+          <li><a href="#about">about Me</a></li>
+          <li><a href="#photos">my Photos</a></li>
+          <li><a href="#playlist">my Playlist</a></li>
+          <li><a href="#vibe">my vibe music</a></li>
+          <li><a href="#like">like</a></li>
+          <li><a href="#contact">contact Me</a></li>
+          <li style="float: right">
             <input
               id="style_button"
               type="button"
@@ -34,17 +32,107 @@
         <br />
         <br />
         <br />
-        <h1 style="font-size: 300%;">me.</h1>
+        <h1 style="font-size: 300%">me.</h1>
         <br />
-        <p style="font-size: 150%; color: blue;">
-          <b style="font-size: 200%;">M</b>y name is <b>Eran Tagansky</b>, I'm
-          {{age}} years old and originally from Rishon Lezion. I am a third year
-          student in the Information Systems Engeneering department in Ben
-          Gurion University. My hobbies are Learning about the world, cooking,
-          watching series and playing and being with my friends. My expectation
-          from this course are very high and I want to learn many intresting
-          things and don't work too much about exhausting css files.
-        </p>
+        <div style="font-size: 150%; color: blue">
+          <p>
+            <b style="font-size: 200%">M</b>y name is <b>Eran Tagansky</b>, and
+            I'm {{age}} years old and originally from Rishon Lezion. <br />
+            I'm a student in the Information Systems Engeneering department of
+            the Ben-Gurion University.
+          </p>
+          <p>
+            I was a Teaching Assistant at Ben-Gurion University and I taught web
+            development to third year students.
+          </p>
+          <p style="margin-left: 1%">
+            <i
+              ><u>
+                <a
+                  href="https://github.com/NAre5"
+                  target="_blank"
+                  style="color: blue; text-decoration: none"
+                >
+                  Link for my github user </a
+                ><br />
+                Links for the labs I created for the course on github</u
+              >:
+              <span>
+                <img
+                  src="Pictures/Node_logo.png"
+                  alt="Node_logo"
+                  width="40px"
+                />
+                <a
+                  href="https://github.com/SISE-Web-Development-Environments/LAB7"
+                  style="color: blue; text-decoration: none"
+                  target="_blank"
+                  >LAB7</a
+                >
+              </span>
+              <span>
+                <img
+                  src="Pictures/Node_logo.png"
+                  alt="Node_logo"
+                  width="40px"
+                />
+                <a
+                  href="https://github.com/SISE-Web-Development-Environments/LAB8"
+                  style="color: blue; text-decoration: none"
+                  target="_blank"
+                  >LAB8</a
+                >
+              </span>
+              <span>
+                <img
+                  src="Pictures/Node_logo.png"
+                  alt="Node_logo"
+                  width="40px"
+                />
+                <a
+                  href="https://github.com/SISE-Web-Development-Environments/LAB9"
+                  style="color: blue; text-decoration: none"
+                  target="_blank"
+                  >LAB9</a
+                >
+              </span>
+              <span>
+                <img src="Pictures/vue_logo.png" alt="Node_logo" width="40px" />
+                <a
+                  href="https://github.com/SISE-Web-Development-Environments/LAB10"
+                  style="color: blue; text-decoration: none"
+                  target="_blank"
+                  >LAB10</a
+                >
+              </span>
+              <span>
+                <img src="Pictures/vue_logo.png" alt="Node_logo" width="40px" />
+                <a
+                  href="https://github.com/SISE-Web-Development-Environments/LAB11"
+                  style="color: blue; text-decoration: none"
+                  target="_blank"
+                  >LAB11</a
+                >
+              </span>
+              <span>
+                <img src="Pictures/vue_logo.png" alt="Node_logo" width="40px" />
+                <a
+                  href="https://github.com/SISE-Web-Development-Environments/LAB12"
+                  style="color: blue; text-decoration: none"
+                  target="_blank"
+                  >LAB12</a
+                >
+              </span>
+            </i>
+          </p>
+          <p>
+            My hobbies are Learning about the world, cooking, watching series,
+            code and hangout with my friends.
+          </p>
+
+          <!-- My expectation from this course are very high and I want to learn many
+          intresting things and don't work too much about exhausting css files. -->
+        </div>
         <br />
         <br />
       </section>
@@ -64,6 +152,25 @@
 
       <section id="playlist" class="section" :style="sectionColor">
         <h1>my playlist</h1>
+        <br />
+        <br />
+        <p align="center">
+          <iframe
+            src="https://open.spotify.com/embed/playlist/6WK4jppAqyeqjt6sEkYTg2"
+            width="300"
+            height="380"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+          <br />
+        </p>
+        <br />
+        <br />
+      </section>
+
+      <section id="vibe" class="section" :style="sectionColor">
+        <h1>my vibe music</h1>
         <br />
         <br />
         <p align="center">
@@ -93,7 +200,7 @@
             src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fnare5.github.io%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId"
             width="450"
             height="80"
-            style="border: none; overflow: hidden;"
+            style="border: none; overflow: hidden"
             scrolling="no"
             frameborder="10"
             allowTransparency="true"

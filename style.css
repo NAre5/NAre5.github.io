@@ -5,6 +5,10 @@
   z-index: 99 !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #menu li {
   border-radius: 100px;
   background: black;
